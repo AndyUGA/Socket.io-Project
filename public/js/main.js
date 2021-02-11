@@ -5,6 +5,7 @@ const socket = io();
 
 socket.on('message', message => {
     console.log(message);
+    document.getElementById('totalAmount').innerHTML = message;
 })
 
 

@@ -26,7 +26,7 @@ io.on('connection', socket => {
     })
 
     socket.on('chatMessage', (msg) => {
-
+        io.emit('message', `The total amount is ${totalAmount}`);
         totalAmount -= msg;
         console.log(`Total amount is ${totalAmount}`);
     });
